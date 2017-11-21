@@ -1,0 +1,321 @@
+[
+   {
+      "name":"Aasimar",
+      "spells":[
+         "daylight",
+         "bless",
+         "command",
+         "protection from evil",
+         "detect magic",
+         "guidance",
+         "stabilize",
+         "daylight"
+      ]
+   },
+   {
+      "name":"Aboleth",
+      "spells":[
+         "hypnotic pattern",
+         "illusory wall",
+         "mirage arcana",
+         "persistent image",
+         "programmed image",
+         "project image",
+         "veil",
+         "dominate monster"
+      ]
+   },
+   {
+      "name":"Angel ",
+      "spells":[
+
+      ]
+   },
+   {
+      "name":"Angel, Astral Deva",
+      "spells":[
+         "aid",
+         "continual flame",
+         "detect evil",
+         "discern lies",
+         "dispel evil",
+         "dispel magic",
+         "holy aura",
+         "holy smite",
+         "holy word",
+         "invisibility",
+         "plane shift",
+         "remove curse",
+         "remove disease",
+         "remove fear",
+         "cure light wounds",
+         "see invisibility",
+         "blade barrier",
+         "heal",
+         "alter self"
+      ]
+   },
+   {
+      "name":"Angel, Planetar",
+      "spells":[
+         "detect evil",
+         "detect snares and pits",
+         "true seeing",
+         "detect evil",
+         "detect snares and pits",
+         "discern lies",
+         "true seeing",
+         "continual flame",
+         "dispel magic",
+         "holy smite",
+         "invisibility",
+         "lesser restoration",
+         "remove curse",
+         "remove disease",
+         "remove fear",
+         "speak with dead",
+         "blade barrier",
+         "flame strike",
+         "power word stun",
+         "raise dead",
+         "waves of fatigue",
+         "earthquake",
+         "greater restoration",
+         "mass charm monster",
+         "waves of exhaustion",
+         "earthquake",
+         "fire storm",
+         "holy word",
+         "regenerate",
+         "banishment",
+         "greater dispel magic",
+         "heal",
+         "mass cure moderate wounds",
+         "break enchantment",
+         "dispel evil",
+         "plane shift",
+         "righteous might",
+         "death ward",
+         "dismissal",
+         "neutralize poison",
+         "summon monster IV",
+         "cure serious wounds",
+         "daylight",
+         "invisibility purge",
+         "summon monster III",
+         "wind wall",
+         "align weapon",
+         "bear's endurance",
+         "cure moderate wounds",
+         "eagle's splendor",
+         "bless",
+         "cure light wounds",
+         "shield of faith",
+         "detect magic",
+         "purify food and drink",
+         "stabilize",
+         "virtue",
+         "alter self"
+      ]
+   },
+   {
+      "name":"Angel, Solar",
+      "spells":[
+         "detect evil",
+         "detect snares and pits",
+         "true seeing",
+         "detect evil",
+         "detect snares and pits",
+         "discern lies",
+         "true seeing",
+         "aid",
+         "animate objects",
+         "commune",
+         "continual flame",
+         "dimensional anchor",
+         "greater dispel magic",
+         "holy smite",
+         "imprisonment",
+         "invisibility",
+         "lesser restoration",
+         "remove curse",
+         "remove disease",
+         "remove fear",
+         "resist energy",
+         "summon monster VII",
+         "speak with dead",
+         "waves of fatigue",
+         "blade barrier",
+         "earthquake",
+         "heal",
+         "mass charm monster",
+         "permanency",
+         "resurrection",
+         "waves of exhaustion",
+         "greater restoration",
+         "power word blind",
+         "power word kill",
+         "power word stun",
+         "prismatic spray",
+         "wish",
+         "mass heal",
+         "miracle",
+         "storm of vengeance",
+         "fire storm",
+         "holy aura",
+         "mass cure critical wounds",
+         "destruction",
+         "dictum",
+         "ethereal jaunt",
+         "holy word",
+         "regenerate",
+         "banishment",
+         "heroes' feast",
+         "mass cure moderate wounds",
+         "undeath to death",
+         "word of recall",
+         "break enchantment",
+         "breath of life",
+         "dispel evil",
+         "plane shift",
+         "righteous might",
+         "symbol of sleep",
+         "cure critical wounds",
+         "death ward",
+         "dismissal",
+         "neutralize poison",
+         "cure serious wounds",
+         "daylight",
+         "invisibility purge",
+         "magic circle against evil",
+         "prayer",
+         "protection from energy",
+         "wind wall",
+         "align weapon",
+         "bear's endurance",
+         "bull's strength",
+         "consecrate",
+         "cure moderate wounds",
+         "eagle's splendor",
+         "bless",
+         "cure light wounds",
+         "divine favor",
+         "entropic shield",
+         "shield of faith",
+         "detect magic",
+         "purify food and drink",
+         "stabilize",
+         "virtue",
+         "alter self"
+      ]
+   },
+   {
+      "name":"Animated Object",
+      "spells":[
+         "animate objects"
+      ]
+   },
+   {
+      "name":"Ankheg",
+      "spells":[
+
+      ]
+   },
+   {
+      "name":"Army Ant Swarm",
+      "spells":[
+
+      ]
+   },
+   {
+      "name":"Ant, Giant",
+      "spells":[
+
+      ]
+   },
+   {
+      "name":"Ape, Gorilla",
+      "spells":[
+
+      ]
+   },
+   {
+      "name":"Ape, Dire",
+      "spells":[
+
+      ]
+   },
+   {
+      "name":"Archon",
+      "spells":[
+         "Spells",
+         "Spell Lists",
+         "Spells"
+      ]
+   },
+   {
+      "name":"Archon, Hound",
+      "spells":[
+         "detect evil",
+         "magic circle against evil",
+         "detect evil",
+         "magic circle against evil",
+         "aid",
+         "continual flame",
+         "greater teleport",
+         "message",
+         "beast shape II"
+      ]
+   },
+   {
+      "name":"Archon, Lantern",
+      "spells":[
+         "aid",
+         "continual flame",
+         "detect evil",
+         "greater teleport"
+      ]
+   },
+   {
+      "name":"Archon, Trumpet",
+      "spells":[
+         "magic circle against evil",
+         "magic circle against evil",
+         "aid",
+         "continual flame",
+         "detect evil",
+         "greater teleport",
+         "message",
+         "mass cure serious wounds",
+         "banishment",
+         "heal",
+         "dispel evil",
+         "mass cure light wounds",
+         "plane shift",
+         "raise dead",
+         "dismissal",
+         "divine power",
+         "neutralize poison",
+         "spell immunity",
+         "cure serious wounds",
+         "daylight",
+         "invisibility purge",
+         "magic vestment",
+         "protection from energy",
+         "bull's strength",
+         "consecrate",
+         "cure moderate wounds",
+         "lesser restoration",
+         "owl's wisdom",
+         "bless",
+         "cure light wounds",
+         "divine favor",
+         "sanctuary",
+         "shield of faith",
+         "detect magic",
+         "purify food and drink",
+         "stabilize",
+         "virtue"
+      ]
+   }
+]
