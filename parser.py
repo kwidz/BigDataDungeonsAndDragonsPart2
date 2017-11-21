@@ -40,7 +40,22 @@ for urlparse in urls:
                 else:
                     index=0
                 try:
+                    print("#########################")
                     print(name[index])
+                    print("#########################")
+                    if(len(name)>=1):
+                        if(index==len(name)-1):
+                            excerpts = re.findall(r'('+name[index]+')(.*?)('+'</div>'+')', newPage.text, re.DOTALL)
+                        else:
+                            excerpts = re.findall(r'('+name[index]+')(.*?)('+name[index+1]+'.*?</h1>)', newPage.text, re.DOTALL)
+                        for e in excerpts:
+                            soup2 = BeautifulSoup(''.join(e),"lxml")
+                            for link2 in soup2.findAll('a'):
+                                if(str(link2).find('/spells/')==-1):
+                                    continue
+                                    
+                                else :
+                                    print(link2.next)
                 except:
                     error+=1
                 namePrevious=name
