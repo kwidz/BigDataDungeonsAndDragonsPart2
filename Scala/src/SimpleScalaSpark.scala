@@ -7,6 +7,8 @@ object SimpleScalaSpark {
     val logFile = "/home/kwidz/UTBM/Chicoutimi/BDD/BigDataDungeonsAndDragonsPart2/README.md" // Should be some file on your system
     val conf = new SparkConf().setAppName("Simple Application").setMaster("local[*]")
     val sc = new SparkContext(conf)
+    sc.setLogLevel("ERROR"); // pour avoir moins de messages dans la console
+
     val logData = sc.textFile(logFile, 2).cache()
     val numAs = logData.filter(line => line.contains("a")).count()
     val numBs = logData.filter(line => line.contains("b")).count()
