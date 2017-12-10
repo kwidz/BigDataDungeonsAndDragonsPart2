@@ -60,6 +60,9 @@ object Exercice2Combat1 {
     // Count all the edges where src is Solar
     println(graph.edges.filter(e => e.srcId == 1L).count)
 
+    graph.edges.filter { case Edge(src, dst, prop) => prop < 10 }.collect.foreach(println)
+    graph.edges.filter { case Edge(src, dst, prop) => prop < 110 }.collect.foreach(println)
+
 
 
   }
