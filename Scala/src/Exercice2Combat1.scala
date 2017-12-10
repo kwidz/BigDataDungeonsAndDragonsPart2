@@ -1,8 +1,15 @@
-import org.apache.spark.graphx.VertexId
+import org.apache.spark.graphx.{Edge, Graph, VertexId}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
 object Exercice2Combat1 {
+
+  def calculateDistance(positionA: Position, positionB: Position ) : Long = {
+    return math.round(math.sqrt(math.pow(positionA.x-positionB.x,2)+math.pow(positionA.y-positionB.y,2)+math.pow(positionA.z-positionB.z,2)))
+
+  }
+
+
   def main(args: Array[String]): Unit = {
 
     val conf = new SparkConf().setAppName("Simple Application").setMaster("local[*]")
@@ -24,6 +31,34 @@ object Exercice2Combat1 {
         (13L,(new BarbareOrc(),new Position(150,0,0))),
         (14L,(new BarbareOrc(),new Position(150,-10,0))),
         (15L,(new BarbareOrc(),new Position(150,-200,0)))))
+    val edges : RDD[Edge[Long]] =
+      sc.parallelize(Array(Edge(1L, 2L, calculateDistance(creatureRDD.lookup(2L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 3L, calculateDistance(creatureRDD.lookup(3L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 4L, calculateDistance(creatureRDD.lookup(4L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 5L, calculateDistance(creatureRDD.lookup(5L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 6L, calculateDistance(creatureRDD.lookup(6L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 7L, calculateDistance(creatureRDD.lookup(7L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 8L, calculateDistance(creatureRDD.lookup(8L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 9L, calculateDistance(creatureRDD.lookup(9L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 10L, calculateDistance(creatureRDD.lookup(10L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 11L, calculateDistance(creatureRDD.lookup(11L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 12L, calculateDistance(creatureRDD.lookup(12L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 13L, calculateDistance(creatureRDD.lookup(13L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 14L, calculateDistance(creatureRDD.lookup(14L).head._2,creatureRDD.lookup(1L).head._2)),
+        Edge(1L, 15L, calculateDistance(creatureRDD.lookup(15L).head._2,creatureRDD.lookup(1L).head._2))
+      ))
+
+    val graph = Graph(creatureRDD, edges)
+    // Count all creatures
+    println(graph.vertices.filter { case (id, (creature, position)) => creature.isInstanceOf[Solar] }.count)
+
+    println(graph.vertices.filter { case (id, (creature, position)) => creature.isInstanceOf[BarbareOrc] }.count)
+
+    println(graph.vertices.filter { case (id, (creature, position)) => creature.isInstanceOf[WarLord] }.count)
+
+
+    // Count all the edges where src is Solar
+    println(graph.edges.filter(e => e.srcId == 1L).count)
 
 
 
