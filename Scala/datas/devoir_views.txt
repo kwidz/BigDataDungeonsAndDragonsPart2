@@ -1,0 +1,16 @@
+/lapins/ edmond 1
+/aoe2/ edmond 1
+/aoe2/ canac 1
+/chiens/ canac 1
+/lapins/ jeremy 1
+/aoe2/ teo 2
+/aoe2/ pl 2
+/aoe2/ pl 2
+/civ5/ edmond 3
+/civ5/ edmond 3
+/civ5/ edmond 3
+/civ5/ pl 4
+/civ5/ teo 4
+/aoe2/ teo 4
+/aoe2/ pl 4
+/aoe2/ pl 4

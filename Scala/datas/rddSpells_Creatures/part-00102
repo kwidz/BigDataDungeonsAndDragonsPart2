@@ -1,0 +1,5 @@
+[control undead,WrappedArray(Devourer, Pukwudgie, Immortal Ichor)]
+[detect undead,WrappedArray(Agathion, Draconal, Dhampir , Dhampir , Psychopomp, Morrigna , Sayona, Shredskin, Shredskin)]
+[false life,WrappedArray(Chromatic Dragon, Blue, Lich, Lich, Vampire, Golem, Carrion, Ravener, Soulbound Doll, Tanuki, Devilbound Creature, Golem, Junk, Soulbound Mannequin, Soulbound Shell, Soulbound Shell)]
+[symbol of death,WrappedArray(Demon, Vrolikai, Great Old One, Hastur)]
+[temporal stasis,WrappedArray(Aeon, Bythos , Protean, Keketar , Qlippoth, Thulgant, Tzitzimitl)]
