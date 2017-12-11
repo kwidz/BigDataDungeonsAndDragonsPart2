@@ -13,10 +13,6 @@ case class BarbareOrc() extends Creature (){
   val Epee_DegatsAditionnels : Int = 30
 
 
-  /*val Epee_De : Int = 6
-  val Epee_NombreDe : Int = 3
-  val Epee_DegatsAditionnels : Int = 18
-*/
 
   def computeDegasEpee() : Int = {
     val rnd = new scala.util.Random

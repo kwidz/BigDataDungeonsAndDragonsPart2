@@ -25,11 +25,32 @@ object Exercice2Combat2 {
     //Add solar
     array.update(i,(i,(new Solar(),new Position(x,y,0))))
 
+    // Add 2 planetar et 2 movanic deva derriere solar
+    i+=1
+    array.update(i,(i,(new Planetar(),new Position(-10,10,0))))
+    i+=1
+    array.update(i,(i,(new MovanicDeva(),new Position(-10,20,0))))
+    i+=1
+    array.update(i,(i,(new Planetar(),new Position(-10,-10,0))))
+    i+=1
+    array.update(i,(i,(new MovanicDeva(),new Position(-10,-20,0))))
+
+    //Add 5 astral deva
+    i+=1
+    array.update(i,(i,(new AstralDeva(),new Position(-20,0,0))))
+    i+=1
+    array.update(i,(i,(new AstralDeva(),new Position(-20,10,0))))
+    i+=1
+    array.update(i,(i,(new AstralDeva(),new Position(-20,20,0))))
+    i+=1
+    array.update(i,(i,(new AstralDeva(),new Position(-20,-10,0))))
+    i+=1
+    array.update(i,(i,(new AstralDeva(),new Position(-20,-20,0))))
+
     //Add 200 barbar orc
     for(x<- 100 until 200 by 10){
       for(y <- 100 until -100 by -10 ){
-        i = i +1
-        println(i)
+        i+=1
         array.update(i,(i,(new BarbareOrc(),new Position(x,y,0))))
       }
      xsave = x
@@ -38,23 +59,14 @@ object Exercice2Combat2 {
   // Add 10 Angel Slayer
     x = xsave + 10
     for(y <- 50 to -40 by -10 ){
+      i+=1
       array.update(i,(i,(new AngelSlayer(),new Position(x,y,0))))
     }
 
     // add Green Great Wyrm Dragon
     x = x + 10
+    i+=1
     array.update(i,(i,(new DragonGreen(),new Position(x,0,0))))
-
-
-
-    //2x Planetar
-    //2x Movanic Deva
-     // 5x Astral Deva
-
-
-
-
-
 
 
     val creatureRDD: RDD[(VertexId,(Creature, Position))] =

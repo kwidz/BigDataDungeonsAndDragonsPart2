@@ -1,20 +1,23 @@
 /**
- * Created by morgane on 10/12/17.
+ * Created by morgane on 11/12/17.
  */
-class AngelSlayer() extends Creature(){
-  var hp:Int = 112
-  var armor :Int = 26
+class MovanicDeva() extends Creature(){
+  var hp:Int = 126
+  var armor :Int = 24
   var distanceRanged : Int = 110
   var distanceCaC : Int = 10
-  val Attacks : Array[Int] = Array(21,16,11)
+  val Attacks : Array[Int] = Array(17,12,7)
   var damageReduction = 0
   var spellResistance = 0
   val speed = 40
+  val speedFly = 60
 
-  //1D8+7 * 3
-  val Epee_De : Int = 8
-  val Epee_NombreDe : Int = 3
-  val Epee_DegatsAditionnels : Int = 3*7
+
+  //2D6+7
+  val Epee_De : Int =6
+  val Epee_NombreDe : Int = 2
+  val Epee_DegatsAditionnels : Int = 7
+
 
 
   def computeDegasEpee() : Int = {
@@ -27,5 +30,4 @@ class AngelSlayer() extends Creature(){
 
     return degats
   }
-
 }
