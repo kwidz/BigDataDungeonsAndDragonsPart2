@@ -1,6 +1,6 @@
 import org.apache.spark.graphx.{Edge, Graph, VertexId}
 import org.apache.spark.rdd.RDD
-import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.{SparkConf, SparkContext, graphx}
 
 object Exercice2Combat1 {
 
@@ -9,6 +9,13 @@ object Exercice2Combat1 {
 
   }
 
+  def doTurn(node: (graphx.VertexId, (Creature, Position)), graph: Graph[(Creature, Position), Long])={
+    val beast = node._2._1
+    println(beast)
+    graph.edges.filter { case Edge(src, dst, prop) => prop > 0 }.collect.foreach(println)
+    //graph.edges.filter { case Edge(src, dst, prop) => prop < 110 }.collect.foreach(println)
+
+  }
 
   def main(args: Array[String]): Unit = {
 
@@ -58,10 +65,13 @@ object Exercice2Combat1 {
 
 
     // Count all the edges where src is Solar
-    println(graph.edges.filter(e => e.srcId == 1L).count)
+    //println(graph.edges.filter(e => e.srcId == 1L).count)
 
-    graph.edges.filter { case Edge(src, dst, prop) => prop < 10 }.collect.foreach(println)
-    graph.edges.filter { case Edge(src, dst, prop) => prop < 110 }.collect.foreach(println)
+    creatureRDD.foreach(f => doTurn(f, graph))
+
+
+
+
 
 
 
