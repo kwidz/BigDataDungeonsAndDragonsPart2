@@ -1,18 +1,24 @@
 import org.apache.spark.graphx.{Edge, Graph, VertexId}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext, graphx}
-
+import org.apache.spark.graphx.EdgeDirection
 object Exercice2Combat1 {
+  var graph: Graph[(Creature, Position), Long] = null
 
   def calculateDistance(positionA: Position, positionB: Position ) : Long = {
     return math.round(math.sqrt(math.pow(positionA.x-positionB.x,2)+math.pow(positionA.y-positionB.y,2)+math.pow(positionA.z-positionB.z,2)))
 
   }
 
-  def doTurn(node: (graphx.VertexId, (Creature, Position)), graph: Graph[(Creature, Position), Long])={
+  def doTurn(node: (graphx.VertexId, (Creature, Position)))={
     val beast = node._2._1
+
     println(beast)
-   // graph.edges.filter { case Edge(src, dst, prop) => prop > 0 }.collect.foreach(println)
+
+    val direction: EdgeDirection = EdgeDirection.Either  // In, Out ...
+    println(graph.collectNeighborIds(direction).lookup(node._1))
+
+    // graph.edges.filter { case Edge(src, dst, prop) => prop > 0 }.collect.foreach(println)
     //graph.edges.filter { case Edge(src, dst, prop) => prop < 110 }.collect.foreach(println)
 
   }
@@ -55,7 +61,11 @@ object Exercice2Combat1 {
         Edge(1L, 15L, calculateDistance(creatureRDD.lookup(15L).head._2,creatureRDD.lookup(1L).head._2))
       ))
 
-    val graph = Graph(creatureRDD, edges)
+    graph = Graph(creatureRDD, edges)
+    graph.vertices.collect.foreach( vv => {
+      println(s"vertexID : ${vv._1} node: ${vv._2}")
+    })
+
     // Count all creatures
     println(graph.vertices.filter { case (id, (creature, position)) => creature.isInstanceOf[Solar] }.count)
 
@@ -67,7 +77,7 @@ object Exercice2Combat1 {
     // Count all the edges where src is Solar
     //println(graph.edges.filter(e => e.srcId == 1L).count)
 
-    creatureRDD.foreach(f => doTurn(f, graph))
+    creatureRDD.foreach(f => doTurn(f))
 
 
 
