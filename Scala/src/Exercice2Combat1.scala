@@ -12,7 +12,7 @@ object Exercice2Combat1 {
   def doTurn(node: (graphx.VertexId, (Creature, Position)), graph: Graph[(Creature, Position), Long])={
     val beast = node._2._1
     println(beast)
-    graph.edges.filter { case Edge(src, dst, prop) => prop > 0 }.collect.foreach(println)
+   // graph.edges.filter { case Edge(src, dst, prop) => prop > 0 }.collect.foreach(println)
     //graph.edges.filter { case Edge(src, dst, prop) => prop < 110 }.collect.foreach(println)
 
   }
