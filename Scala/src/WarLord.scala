@@ -38,4 +38,9 @@ case class WarLord() extends Creature (){
 
     return degats
   }
+
+
+  override def getArmor(): Int = {
+    return armor;
+  }
 }

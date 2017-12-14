@@ -33,4 +33,9 @@ class Planetar() extends Creature(){
 
     return degats
   }
+
+
+  override def getArmor(): Int = {
+    return armor;
+  }
 }

@@ -39,4 +39,8 @@ case class WorgsRider() extends Creature (){
 
     return degats
   }*/
+
+  override def getArmor(): Int = {
+    return armor;
+  }
 }

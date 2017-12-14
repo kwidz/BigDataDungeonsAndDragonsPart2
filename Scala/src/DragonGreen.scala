@@ -19,8 +19,8 @@ class DragonGreen() extends Creature(){
   val bite_NombreDe : Int = 3
   val bite_DegatsAditionnels : Int = 18
 
-
-  def computeDegasBite() : Int = {
+//Degat Bite nommée degat epee pour l'heritage
+  def computeDegasEpee() : Int = {
     val rnd = new scala.util.Random
     var degats = bite_DegatsAditionnels
     var i = 0
@@ -82,4 +82,11 @@ class DragonGreen() extends Creature(){
 
     return degats
   }
+
+
+  override def getArmor(): Int = {
+    return armor;
+  }
+
+
 }
