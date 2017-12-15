@@ -88,5 +88,12 @@ class DragonGreen() extends Creature(){
     return armor;
   }
 
+  override def getHP(): Int = {
+    return hp
+  }
+
+  override def setHP(i: Int): Unit ={
+    hp = i
+  }
 
 }

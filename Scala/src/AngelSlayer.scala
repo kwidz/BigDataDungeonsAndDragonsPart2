@@ -32,4 +32,12 @@ class AngelSlayer() extends Creature(){
   override def getArmor(): Int = {
     return armor;
   }
+
+  override def getHP(): Int = {
+    return hp
+  }
+
+  override def setHP(i: Int): Unit ={
+    hp = i
+  }
 }

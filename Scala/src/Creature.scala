@@ -6,4 +6,6 @@ abstract class Creature() extends Serializable{
   def computeDegasEpee():Int
 
   def getArmor():Int
+  def getHP():Int
+  def setHP(i : Int)
 }
